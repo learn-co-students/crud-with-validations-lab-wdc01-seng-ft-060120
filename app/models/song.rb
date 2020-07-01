@@ -15,7 +15,7 @@ class Song < ApplicationRecord
 
 
     def released?
-        self.released == true
+        self.released
     end
 
 end
