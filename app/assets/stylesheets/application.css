@@ -19,3 +19,8 @@
   background-color: red;
   display: table;
 }
+
+.error_list {
+  color :red;
+  text-shadow :yellow 5px 5px;
+}
