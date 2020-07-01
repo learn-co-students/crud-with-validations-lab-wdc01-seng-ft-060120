@@ -25,12 +25,26 @@ class SongsController < ApplicationController
   end
 
   def update
+    @song.assign_attributes(song_params)
+    if @song.save
+      redirect_to song_path(@song)
+    else
+      render :edit
+    end
   end
 
   def destroy
   end
 
   private
+  def validate_song_or_render(action)
+    if @song.save
+      redirect_to song_path(@song)
+    else
+      render action
+    end
+  end
+
   def set_song
     @song = Song.find(params[:id])
   end
