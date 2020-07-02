@@ -1,0 +1,9 @@
+<h1>Song Details </h1>
+
+<div>Title: <%= @song.title %></div><br>
+<div>Released: <%= @song.released %></div><br>
+<div>Release Year: <%= @song.release_year %></div><br>
+<div>Artist Name: <%= @song.artist_name %></div><br>
+<div>Genre: <%= @song.genre %></div><br>
+<%= button_to "Edit this Song", edit_song_path(@song.id), method: :get %><br>
+<%= button_to "Delete this Song", song_path(@song.id), method: :delete %>
