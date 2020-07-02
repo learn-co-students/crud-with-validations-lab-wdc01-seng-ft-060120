@@ -1,1 +1,9 @@
-<h2>Show Page</h2>
+<h2>
+  <%= @song.title %>
+</h2>
+<ul>
+  <li>Artist: <%=@song.artist_name%></li>
+  <li>Released: <%=@song.released%></li>
+  <li>Release Year: <%=@song.release_year%></li>
+  <li>Genre: <%=@song.genre%></li>  
+</ul>
